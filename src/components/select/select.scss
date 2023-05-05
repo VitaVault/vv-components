@@ -1,0 +1,94 @@
+@import "../../styles/variables.scss";
+
+.select-container {
+  margin-bottom: $input-bottom-margin;
+  position: relative;
+
+  label {
+    position: absolute;
+    top: 0.6rem;
+    left: 1.4rem;
+    right: 1.4rem;
+    font-size: $fontsize-l;
+    font-weight: 400;
+    z-index: 1;
+    pointer-events: none;
+    transition: all $input-transition-time ease-in-out;
+    color: $input-label-color;
+  }
+
+  select:focus ~ label,
+  select[data-touched="true"] ~ label,
+  select:not([data-touched="true"]):not([value=""]) ~ label {
+    top: 0.6rem;
+    font-size: $input-label-fontsize-touched;
+  }
+
+  select {
+    display: flex;
+    position: relative;
+    color: $input-value-color;
+    background-color: #fff;
+    border: $input-border;
+    border-radius: $input-border-radius;
+    font-size: $input-value-fontsize;
+    line-height: $fontsize-l;
+    min-height: 4rem;
+    width: 100%;
+    padding: 2.3rem 1.2rem 0.5rem;
+    transition: border-color $input-transition-time ease-in-out;
+    will-change: border-color;
+
+    appearance: none;
+
+    cursor: pointer;
+    background: url("./assets/arrow_down.svg") no-repeat;
+    background-size: 1.2rem;
+    background-position: calc(100% - 20px) center;
+    background-repeat: no-repeat;
+
+    &::placeholder {
+      transition: opacity $input-transition-time ease-in-out;
+      opacity: 0;
+    }
+    &[data-touched="true"]::placeholder,
+    &:focus::placeholder {
+      opacity: 1;
+    }
+
+    &:disabled {
+      background-color: $input-disabled-bg-color;
+      cursor: not-allowed;
+    }
+
+    &[data-touched="true"]:invalid {
+      border-color: $input-error-color;
+
+      option {
+        color: $input-error-color;
+      }
+
+      & ~ .select-error {
+        display: block;
+        margin-top: $input-error-margin-top;
+        margin-inline-start: $input-error-margin-start;
+        font-size: $input-error-message-fontsize;
+      }
+
+      & ~ .select-error:empty {
+        display: none;
+      }
+    }
+
+    option {
+      font-weight: normal;
+      color: $input-value-color;
+    }
+  }
+
+  .select-error {
+    display: none;
+    color: $input-error-color;
+    margin-bottom: 0;
+  }
+}

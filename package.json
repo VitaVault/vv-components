@@ -1,0 +1,72 @@
+{
+  "name": "@vita-vault/form-components",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "build-storybook": "storybook build",
+    "commit": "npx cz",
+    "cz": "npx cz",
+    "lint": "npx eslint ./src/",
+    "lint:fix": "npx eslint ./src/ --fix",
+    "prepare": "husky install",
+    "prettier": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write .",
+    "storybook": "storybook dev -p 6006",
+    "test": "npx jest"
+  },
+  "dependencies": {
+    "@types/node": "18.14.0",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "change-case": "^4.1.2",
+    "clsx": "^1.2.1",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@storybook/addon-a11y": "^7.0.4",
+    "@storybook/addon-actions": "^7.0.4",
+    "@storybook/addon-essentials": "^7.0.4",
+    "@storybook/addon-interactions": "^7.0.4",
+    "@storybook/addon-links": "^7.0.4",
+    "@storybook/addon-mdx-gfm": "^7.0.4",
+    "@storybook/addon-styling": "^1.0.0",
+    "@storybook/jest": "^0.1.0",
+    "@storybook/nextjs": "^7.0.4",
+    "@storybook/react": "^7.0.4",
+    "@storybook/testing-library": "^0.1.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest-axe": "^3.5.5",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "babel-loader": "^8.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "8.34.0",
+    "eslint-config-next": "^13.1.6",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-storybook": "^0.6.11",
+    "husky": "^8.0.0",
+    "jest-axe": "^7.0.0",
+    "jest-environment-jsdom": "^29.4.3",
+    "normalize.css": "^8.0.1",
+    "prettier": "2.8.8",
+    "react-icons": "^4.7.1",
+    "react-test-renderer": "^18.2.0",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "storybook": "^7.0.4",
+    "util": "^0.12.5"
+  },
+  "main": "./src/index.ts",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

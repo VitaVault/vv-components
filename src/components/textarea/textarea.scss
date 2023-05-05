@@ -1,0 +1,75 @@
+@import "../../styles/variables.scss";
+
+.textarea-container {
+  margin-bottom: $input-bottom-margin;
+  position: relative;
+
+  label {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.4rem;
+    right: 1.4rem;
+    font-size: $input-label-fontsize;
+    font-weight: 400;
+    z-index: 1;
+    pointer-events: none;
+    transition: all $input-transition-time ease-in-out;
+    color: $input-label-color;
+  }
+
+  textarea:focus ~ label,
+  textarea[data-touched="true"] ~ label,
+  textarea:not([data-touched="true"]):not([value=""]) ~ label {
+    top: 0.6rem;
+    font-size: $input-label-fontsize-touched;
+  }
+
+  textarea {
+    display: flex;
+    position: relative;
+    color: $input-value-color;
+    background-color: #fff;
+    border: $input-border;
+    border-radius: $input-border-radius;
+    font-size: $input-value-fontsize;
+    line-height: $input-value-fontsize;
+    min-height: 4rem;
+    width: 100%;
+    padding: 2rem 1.2rem 0.8rem;
+    transition: border-color $input-transition-time ease-in-out;
+    will-change: border-color;
+    resize: vertical;
+
+    &::placeholder {
+      transition: opacity $input-transition-time ease-in-out;
+      opacity: 1;
+    }
+
+    &[data-touched="true"]:not(:focus):invalid {
+      &::placeholder {
+        color: $wrong-red;
+      }
+    }
+
+    &[data-touched="true"]:invalid {
+      border-color: $input-error-color;
+
+      & ~ .textarea-error {
+        display: block;
+        margin-top: $input-error-margin-top;
+        margin-inline-start: $input-error-margin-start;
+      }
+
+      & ~ .textarea-error:empty {
+        display: none;
+      }
+    }
+  }
+
+  .textarea-error {
+    display: none;
+    color: $input-error-color;
+    font-size: $input-error-message-fontsize;
+    margin-bottom: 0;
+  }
+}

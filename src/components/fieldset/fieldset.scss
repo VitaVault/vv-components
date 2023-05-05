@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+$colum-gutter: 0.4rem;
+
+.fieldset-container {
+  width: 100%;
+  margin: 0;
+  margin-bottom: $input-bottom-margin;
+
+  &.fieldset-bordered {
+    border: $input-border;
+    border-radius: $input-border-radius;
+    padding: 1.3rem 1rem;
+  }
+
+  &.fieldset-non-bordered {
+    border: none;
+    padding: 0;
+  }
+
+  .fieldset-content > *:last-child {
+    margin-bottom: 0;
+  }
+
+  &.fieldset-alignment-horizontal .fieldset-content {
+    display: flex;
+    flex-direction: row;
+
+    & > *:first-child {
+      margin-right: $colum-gutter;
+    }
+
+    & > *:not(:first-child):not(:last-child) {
+      margin-left: calc($colum-gutter / 2);
+      margin-right: calc($colum-gutter / 2);
+    }
+
+    & > *:last-child {
+      margin-left: $colum-gutter;
+    }
+  }
+
+  legend {
+    padding-inline-start: 0.2rem;
+    font-size: $fontsize-l;
+    color: $pitch-black;
+    font-weight: 600;
+  }
+
+  .fieldset-footnote {
+    font-size: $fontsize-m;
+    margin-bottom: 0;
+    color: $pitch-black;
+  }
+
+  &.fieldset-non-bordered.fieldset-alignment-horizontal {
+    .input-container,
+    .textarea-container,
+    .select-container {
+      margin-bottom: 0;
+    }
+  }
+}
