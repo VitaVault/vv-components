@@ -1,7 +1,8 @@
 {
-  "name": "@vita-vault/form-components",
-  "version": "0.0.1",
-  "private": true,
+  "name": "@vitavault/vv-components",
+  "author": "richyst",
+  "repository": "https://github.com/VitaVault/vv-components.git",
+  "version": "0.0.4",
   "scripts": {
     "build": "next build",
     "build-storybook": "storybook build",
@@ -68,5 +69,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
