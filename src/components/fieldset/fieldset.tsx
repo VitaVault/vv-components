@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { CSSClassGenerator } from '../../styles/css-class-name-gen'
+
 import clsx from 'clsx'
 
 import type { FieldsetProps } from './fieldset.types'

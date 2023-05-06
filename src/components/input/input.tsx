@@ -1,5 +1,6 @@
 import { useInputValidation } from '../../hooks/useInputValidation.hook'
 import { CSSClassGenerator } from '../../styles/css-class-name-gen'
+
 import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'

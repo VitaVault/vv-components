@@ -11,15 +11,15 @@ export default defineConfig((configEnv) => ({
     react(),
     tsConfigPaths(),
     dts({
-      include: ['src/'],
-    }),
+      include: ['src/']
+    })
   ],
   build: {
     lib: {
       entry: resolve('src', 'index.ts'),
       name: 'vv-components',
       formats: ['es', 'umd'],
-      fileName: (format) => `vv-components.${format}.js`,
-    },
-  },
+      fileName: (format) => `vv-components.${format}.js`
+    }
+  }
 }))

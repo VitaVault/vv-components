@@ -1,13 +1,20 @@
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/addon-a11y', '@storybook/addon-mdx-gfm', {
-    name: '@storybook/addon-styling',
-    options: {
-      sass: {
-        implementation: require('sass')
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-a11y',
+    '@storybook/addon-mdx-gfm',
+    {
+      name: '@storybook/addon-styling',
+      options: {
+        sass: {
+          implementation: require('sass')
+        }
       }
     }
-  }],
+  ],
   features: {
     interactionsDebugger: true
   },
@@ -18,4 +25,4 @@ module.exports = {
   docs: {
     autodocs: true
   }
-};
+}

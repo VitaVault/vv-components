@@ -5,7 +5,6 @@ import {
   ThenClause,
   WhenClause
 } from '../formbuilder.types'
-
 import { ValidityStateErrors } from '../hooks/useInputValidation.hook'
 
 const mockErrorMessages: Record<ValidityStateErrors, string> = {

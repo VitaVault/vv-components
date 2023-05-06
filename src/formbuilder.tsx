@@ -3,9 +3,9 @@ import FBFieldset from './components/wrappers/fbfieldset'
 import FBInput from './components/wrappers/fbinput'
 import FBSelect from './components/wrappers/fbselect'
 import FBTextarea from './components/wrappers/fbtextarea'
+import { CSSClassGenerator } from './styles/css-class-name-gen'
 import FBUtils from './utils'
 
-import { CSSClassGenerator } from './styles/css-class-name-gen'
 import { ChangeEvent, FC, useState } from 'react'
 
 import type { FBField, FBFieldProps, FormFormat } from './formbuilder.types'

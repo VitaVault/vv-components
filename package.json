@@ -1,7 +1,6 @@
 {
   "name": "@vitavault/vv-components",
   "version": "0.0.3",
-  "type": "module",
   "repository": "https://github.com/VitaVault/vv-components.git",
   "scripts": {
     "dev": "vite",
@@ -9,14 +8,14 @@
     "build-storybook": "storybook build",
     "commit": "npx cz",
     "cz": "npx cz",
-    "lint": "npx eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "npx eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
+    "lint": "npx eslint src --ext ts,tsx --report-unused-disable-directives",
+    "lint:fix": "npx eslint src --ext ts,tsx --report-unused-disable-directives --fix",
     "prepare": "husky install",
     "prettier": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "test": "npx jest"
+    "test": "npx jest ./src/"
   },
   "dependencies": {
     "@types/node": "18.14.0",
@@ -75,6 +74,10 @@
     "vite-plugin-dts": "^2.3.0",
     "vite-tsconfig-paths": "^4.2.0"
   },
+  "files": [
+    "dist"
+  ],
+  "main": "vv-components.es.js",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
