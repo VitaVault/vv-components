@@ -2,7 +2,7 @@
   "name": "@vitavault/vv-components",
   "author": "richyst",
   "repository": "https://github.com/VitaVault/vv-components.git",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build": "next build",
     "build-storybook": "storybook build",
