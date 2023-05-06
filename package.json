@@ -77,7 +77,7 @@
   "files": [
     "dist"
   ],
-  "main": "vv-components.es.js",
+  "main": "./dist/index",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
