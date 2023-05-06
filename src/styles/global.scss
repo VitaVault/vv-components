@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* default font family */
+  font-size: 62.5%;
+}
+
+*,
+::before,
+*::after {
+  box-sizing: inherit;
+}
+
+main,
+section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+header,
+footer {
+  min-width: 30rem;
+  width: 100%;
+}
+
+footer {
+  display: inline-block;
+}
+
+body {
+  background-color: white;
+  font-size: 1.4rem;
+}
+
+dialog {
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
