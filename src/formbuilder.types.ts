@@ -57,8 +57,13 @@ export type WhenClause =
     }
   | {
       field: string
-      operator: 'EQUALS' | 'NEQUALS' | 'EXISTS' | 'NEXISTS' | 'CHANGED'
+      operator: 'EQUALS' | 'NEQUALS'
       value: string
+    }
+  | {
+      field: string
+      operator: 'EXISTS' | 'NEXISTS' | 'CHANGED'
+      value?: string
     }
 
 export interface ThenClause {
@@ -80,4 +85,8 @@ export interface FormFormat {
   rules: {
     [key: string]: Rule[]
   }
+}
+
+export interface FormbuilderProps {
+  form: FormFormat
 }
