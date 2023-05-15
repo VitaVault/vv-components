@@ -4,7 +4,7 @@ import {
   FormValidationProps
 } from './formbuilder.props'
 
-import Formbuilder from '..'
+import { Formbuilder } from '..'
 
 import { Meta } from '@storybook/react'
 

@@ -2,6 +2,12 @@
   "name": "@vitavault/vv-components",
   "version": "0.0.5",
   "repository": "https://github.com/VitaVault/vv-components.git",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vv-components.cjs.js",
+  "module": "./dist/vv-components.es.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -74,10 +80,6 @@
     "vite-plugin-dts": "^2.3.0",
     "vite-tsconfig-paths": "^4.2.0"
   },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
