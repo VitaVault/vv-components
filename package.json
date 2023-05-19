@@ -1,6 +1,6 @@
 {
   "name": "@vitavault/vv-components",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "repository": "https://github.com/VitaVault/vv-components.git",
   "files": [
     "dist"
