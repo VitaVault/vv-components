@@ -99,7 +99,7 @@ export const mockFieldset = (
   }
 }
 
-export const FormMock = (
+export const mockForm = (
   name: string,
   fields: FBFieldProps<keyof InputPropsMap>[] = [],
   rules: { [key: string]: { when: WhenClause[]; then: ThenClause }[] } = {}

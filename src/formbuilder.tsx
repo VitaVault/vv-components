@@ -8,15 +8,17 @@ import FBUtils from './utils'
 
 import { ChangeEvent, FC, useState } from 'react'
 
-import type { FBField, FBFieldProps, FormFormat } from './formbuilder.types'
+import type {
+  FBField,
+  FBFieldProps,
+  FormbuilderProps
+} from './formbuilder.types'
 import type { formSubmitCallback } from './hooks/useFormValidation.hook'
 
 const componentName = 'formbuilder'
 
-export const Formbuilder: FC<FormFormat> = ({
-  submitLabel,
-  fields: initialFields,
-  rules
+export const Formbuilder: FC<FormbuilderProps> = ({
+  form: { submitLabel = '', fields: initialFields, rules = {} }
 }) => {
   const css = new CSSClassGenerator(componentName)
   const fb = new FBUtils(FBFieldset, FBInput, FBTextarea, FBSelect)
@@ -24,14 +26,14 @@ export const Formbuilder: FC<FormFormat> = ({
   const onFieldChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
-    const updatedFields = FBUtils.modifyField(e.target.id, formFields, {
+    const updatedFields = FBUtils.ModifyField(e.target.id, formFields, {
       value: e.target.value
     })
-    const ruleEvaluationQueue = FBUtils.createRuleExecutionQueue(
+    const ruleEvaluationQueue = FBUtils.CreateRuleExecutionQueue(
       e.target.id,
       rules
     )
-    const fieldsWithRulesApplied = FBUtils.evaluateRuleEvacuationQueue(
+    const fieldsWithRulesApplied = FBUtils.EvaluateRuleEvacuationQueue(
       ruleEvaluationQueue,
       updatedFields
     )

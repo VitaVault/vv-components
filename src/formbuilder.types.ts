@@ -21,10 +21,6 @@ export type InputVariantsMap = {
 
 export type FBField = FBFieldProps<keyof InputPropsMap>
 
-interface FBFieldControlProps {
-  component: keyof InputPropsMap
-}
-
 export type FBInputProps = InputProps
 export type FBTextareaProps = TextareaProps
 export interface FBSelectProps extends SelectProps {
@@ -43,11 +39,10 @@ export interface FBFieldsetProps extends FieldsetProps {
   fields: Array<FBField>
 }
 
-export type FBFieldProps<T extends keyof InputPropsMap> = InputPropsMap[T] &
-  FBFieldControlProps & {
-    component: T
-    variant: InputVariantsMap[T]
-  }
+export type FBFieldProps<T extends keyof InputPropsMap> = InputPropsMap[T] & {
+  component: T
+  variant: InputVariantsMap[T]
+}
 
 export type WhenClause =
   | {
