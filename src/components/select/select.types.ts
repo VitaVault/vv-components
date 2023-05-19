@@ -7,6 +7,7 @@ export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   children?: React.ReactNode[] | React.ReactNode
   label?: string
   hidden?: boolean
+  value?: string
   errorMessages?: {
     [key in ValidityStateErrors]?: string
   }
